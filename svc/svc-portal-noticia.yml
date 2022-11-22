@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-portal-noticia
+spec:
+  type: NodePort
+  ports:
+    - port: 9000
+      targetPort: 80
+      nodePort: 30000
+  selector:
+    app: portal-noticias
